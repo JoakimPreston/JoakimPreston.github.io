@@ -1,0 +1,57 @@
+<!-- Your existing HTML code -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input Field Example</title>
+  <!-- Link the CSS file -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Enkelemisjon.no</h1>
+
+  <!-- First input field -->
+  <div>
+    <label for="amount">Hvor mye penger skal dere hente?</label>
+    <input type="number" id="amount" name="amount" min="0" max="10000000" value="0">
+  </div>
+
+  <!-- Second input field -->
+  <div>
+    <label for="valuation">Hva er verdivurderingen?</label>
+    <input type="number" id="valuation" name="valuation" min="0" max="50000000" value="0">
+  </div>
+
+  <!-- Output field -->
+  <div>
+    <label for="result">Da gir dere bort så mye av selskapet:</label>
+    <output id="result">0%</output>
+  </div>
+
+  <!-- Your other HTML content goes here (if any) -->
+
+  <script>
+    // JavaScript to calculate and display the result as a percentage
+    const amountInput = document.getElementById('amount');
+    const valuationInput = document.getElementById('valuation');
+    const resultOutput = document.getElementById('result');
+
+    function calculateResult() {
+      const amountValue = parseFloat(amountInput.value);
+      const valuationValue = parseFloat(valuationInput.value);
+
+      if (!isNaN(amountValue) && !isNaN(valuationValue) && valuationValue !== 0) {
+        const result = (amountValue / valuationValue) * 100;
+        resultOutput.textContent = result.toFixed(2) + "%"; // Display result as a percentage with two decimal places
+      } else {
+        resultOutput.textContent = "Invalid input"; // Display if either input is not a number or the valuationValue is 0
+      }
+    }
+
+    // Add event listeners to update the result whenever the input fields change
+    amountInput.addEventListener('input', calculateResult);
+    valuationInput.addEventListener('input', calculateResult);
+  </script>
+</body>
+</html>
