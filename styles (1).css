@@ -1,0 +1,64 @@
+
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #3922CF;
+  color: #FFFFFA;
+  margin: 0;
+  padding: 100px 100px;/* Add units (e.g., px) to the padding value */
+}
+h1 {
+  text-align: &#x2190;;
+  margin: 20px 0;
+  color: #FFF0B6;
+}
+
+/* Style the input fields */
+div {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  padding: 20;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style the output field */
+.output-container {
+  text-align: center;
+}
+
+output {
+  display: block;
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #FFFFFA;
+}
+
+/* Add some button styles (optional) */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
